@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/card">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/imgContainer"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/imgMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menu_placeholder" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvMenuName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Sushi Name"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/imgContainer"
+            app:layout_constraintTop_toTopOf="@id/imgContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="12dp"/>
+
+        <TextView
+            android:id="@+id/tvMenuDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi menu sushi segar..."
+            android:textColor="@color/text_secondary"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@id/tvMenuName"
+            app:layout_constraintTop_toBottomOf="@id/tvMenuName"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvCategoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIGIRI"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvMenuPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/tvMenuPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            app:layout_constraintStart_toStartOf="@id/tvMenuName"
+            app:layout_constraintBottom_toBottomOf="@id/imgContainer"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

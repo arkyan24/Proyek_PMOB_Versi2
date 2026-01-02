@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "570582688324",
+    "firebase_url": "https://projectpmob-94757-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "projectpmob-94757",
+    "storage_bucket": "projectpmob-94757.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570582688324:android:4265d217c9f2c246e59211",
+        "android_client_info": {
+          "package_name": "com.proyek_pmob.dineinresto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPqBFgMLZSWoDgRI_mOG3oF56IeunvVQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570582688324:android:e56dbff49417f376e59211",
+        "android_client_info": {
+          "package_name": "com.sushisasageyo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPqBFgMLZSWoDgRI_mOG3oF56IeunvVQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/nav_home">
+
+    <navigation
+        android:id="@+id/nav_home"
+        app:startDestination="@id/homeFragment">
+
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.sushisasageyo.HomeFragment"
+            android:label="Home">
+            <action
+                android:id="@+id/action_home_to_category"
+                app:destination="@id/categoryFragment"/>
+        </fragment>
+
+        <fragment
+            android:id="@+id/categoryFragment"
+            android:name="com.sushisasageyo.CategoryFragment"
+            android:label="Category">
+            <argument android:name="categoryId" app:argType="string"/>
+            <argument android:name="categoryName" app:argType="string"/>
+            <action
+                android:id="@+id/action_category_to_menuDetail"
+                app:destination="@id/menuDetailFragment"/>
+        </fragment>
+
+        <dialog
+            android:id="@+id/menuDetailFragment"
+            android:name="com.sushisasageyo.MenuDetailFragment"
+            android:label="Menu Detail">
+            <argument android:name="categoryId" app:argType="string"/>
+            <argument android:name="menuId" app:argType="string"/>
+            <argument android:name="categoryName" app:argType="string"/>
+        </dialog>
+
+        <action
+            android:id="@+id/action_nav_home_self"
+            app:destination="@id/nav_home" />
+    </navigation>
+
+    <navigation
+        android:id="@+id/nav_order"
+        app:startDestination="@id/orderFragment">
+
+        <fragment
+            android:id="@+id/orderFragment"
+            android:name="com.sushisasageyo.OrderFragment"
+            android:label="Order"/>
+        <action
+            android:id="@+id/action_nav_order_self"
+            app:destination="@id/nav_order" />
+    </navigation>
+
+    <navigation
+        android:id="@+id/nav_account"
+        app:startDestination="@id/accountFragment">
+
+        <fragment
+            android:id="@+id/accountFragment"
+            android:name="com.sushisasageyo.AccountFragment"
+            android:label="Account">
+            <action
+                android:id="@+id/action_account_to_editProfile"
+                app:destination="@id/editProfileFragment"/>
+        </fragment>
+
+        <fragment
+            android:id="@+id/editProfileFragment"
+            android:name="com.sushisasageyo.EditProfileFragment"
+            android:label="Edit Profile"/>
+        <action
+            android:id="@+id/action_nav_account_self"
+            app:destination="@id/nav_account" />
+    </navigation>
+
+</navigation>
